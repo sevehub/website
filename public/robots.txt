@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /staticweb/
+Disallow: /shared/
+Disallow: /staticdeno/
+
+Sitemap: https://tessarinseve.pythonanywhere.com/nws/sitemap.xml
+
+

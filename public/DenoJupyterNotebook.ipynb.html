@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang=en> <head><title>DenoJupyterNotebook - SeveTech</title><meta charset=utf-8><meta http-equiv=Content-Security-Policy content="img-src https: data:;"><link rel=alternate type=application/rss+xml href=https://tessarinseve.pythonanywhere.com/nws/atom.xml title="Sevetech Journal Blog"><meta name=viewport content="width=device-width, initial-scale=.9,shrink-to-fit=no"><meta name=robots content="index, follow"><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=twitter:title content=DenoJupyterNotebook><meta name=twitter:description content><meta name=twitter:image content=" https://tessarinseve.pythonanywhere.com/twittercard"><meta name=twitter:card content=summary><meta property=og:type content=website><meta property=og:title content=DenoJupyterNotebook><meta property=og:image content=https://tessarinseve.pythonanywhere.com/staticweb/blogpost.png><meta property=og:image:type content=image/png><meta property=og:image:width content=475><meta property=og:image:height content=724><script type=application/ld+json>
+      {
+        "@context": "https://schema.org/",
+        "@type": "Article",
+        "name": "DenoJupyterNotebook",
+        "image": [ "https://tessarinseve.pythonanywhere.com/staticweb/blogpost.png" ],
+        "author": {
+          "@type": "Person",
+          "name": "SeveTech"
+        }
+      }
+</script><link rel=stylesheet href=./theme/css/bootstrap.min.css type=text/css><link href=./theme/css/tipuesearch.css rel=stylesheet><link href=./theme/css/style.css rel=stylesheet><link href=./theme/css/highlight-style.css rel=stylesheet><link rel="shortcut icon" href=./theme/imgs/favicon.ico><link rel=apple-touch-icon href=./theme/imgs/apple-touch-icon.png><link rel=apple-touch-icon sizes=72x72 href=./theme/imgs/apple-touch-icon-72x72.png><link rel=apple-touch-icon sizes=114x114 href=./theme/imgs/apple-touch-icon-114x114.png><link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head> <body> <nav class="navbar sticky-top navbar-dark navbar-expand-sm navbar-custom"> <a class=brand href=./index.html>Seve </a> <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarCollapse aria-controls=navbarCollapse aria-expanded=false aria-label="Toggle navigation"> <span class=navbar-toggler-icon></span> </button> <div class="collapse navbar-collapse" id=navbarCollapse> <ul class="navbar-nav nav"> <li class="nav-item dropdown"> <a href=# class="nav-link dropdown-toggle" data-toggle=dropdown>Categories</a> <div class=dropdown-menu aria-labelledby=dropdown1> <a class=dropdown-item href=./category/ipynb.html> <i class="fa fa-folder fanavbar"></i> IPYNB </a> <a class=dropdown-item href=./category/journal.html> <i class="fa fa-folder fanavbar"></i> Journal </a> <a class=dropdown-item href=./category/pages.html> <i class="fa fa-folder fanavbar"></i> Pages </a> </div> </li> <li class=nav-item> <a class=nav-link href=/nws/search.html> Search <i class="fa fa-search" aria-hidden=true></i></a> </li> <li class=nav-item> <a class=nav-link href=/nws/atom.xml> RSS feed <i class="fa fa-rss" aria-hidden=true></i></a> </li> </ul> </div> </nav> <main role=main class=container> <style>
+
+/* Code cell input styling */
+.jp-Cell-inputArea {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Prompt styling for input cells */
+.jp-InputPrompt {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.jp-OutputPrompt {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* Highlighting styles for syntax classes */
+span.kn { /* Keywords like 'import' and 'from' */
+    color: #007acc;
+    font-weight: bold;
+}
+
+span.nn { /* Namespaces like 'pandas', 'numpy', etc. */
+    color: #5c9e4d;
+}
+
+span.k { /* Operators like 'as' */
+    color: #a71d5d;
+    font-style: italic;
+}
+
+span.n { /* Variables and function names */
+    color: black;
+}
+
+span.s2 { /* String literals */
+    color: #d14;
+}
+
+span.p { /* Punctuation */
+    color: #808080;
+}
+
+span.kc { /* Constants like 'None' */
+    color: #b67f2c;
+    font-weight: bold;
+}
+
+/* Preformatted text styling */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Table styling for output cells */
+table.dataframe {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table.dataframe th, table.dataframe td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table.dataframe th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.jp-RenderedImage {
+    max-width: 100%; /* Ensures the figure doesn't exceed its container */
+    margin: 10px auto; /* Center the figure and add spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jp-RenderedImage img {
+    width: 100%; /* Scale the image to fit its container */
+    height: auto; /* Preserve the aspect ratio */
+    max-height: 500px; /* Optional: Set a maximum height if needed */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+</style> <div class=article> <div class="row mb-6"> <aside class="col-lg-4 col-md-4 col-sm-12 blog-sidebar"> <div class="p-4 mb-3 bg-dark border rounded"> <div> <p>Fri 24 November 2023 </p> <p style="text-align: left;"> <i> Category:</i> <a href=./category/ipynb.html>IPYNB</a> </p> <p style="text-align: left;display: none;"> Tags <a href=./tag/jupyter-notebook.html>jupyter notebook</a> </p> <p> <table class="table table-responsive table-borderless"> <tbody> <tr> <td style="display:flex; justify-content: center;  align-items: center !important;"> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js charset=utf-8></script> </td> <td style="display:flex; justify-content: center;  align-items: center !important;"> <a href=https://www.pinterest.com/pin/create/button/ data-pin-do=buttonBookmark> </a><script type=text/javascript async defer src=//assets.pinterest.com/js/pinit.js></script> </td> </tr> </tbody> </table> </p> <p> <a href=https://tessarinseve.pythonanywhere.com/shared/request-form.html><b>Leave your feedback.</b></a> </p> <p> <a href="https://gitlab.com/Sevepy/wktopelican/-/raw/master/Documents/IPYNB/DenoJupyterNotebook.ipynb?inline=false"><i class="fa fa-download"> Download</i></a> </p> <p class=small> Become a supporter (click the "cup of coffee" widget on the right-bottom corner) and help me to keep this website online. </p> <p> <div class="row justify-content-center" style=display:block> <div class=col-auto> <a href=https://temu.to/m/e3vctip38c2 class="btn btn-primary" role=button> Click to join Temu Affiliate Program </a> <p class=temu-caption> <i>As a Temu Affiliate I earn from qualifying purchases</i> </p> </div> </div> </p> <p> <div class="row justify-content-center" style=display:none> <div class=col-auto> <table class="table table-responsive"> <tbody> <tr> <td align=center> </td> </tr> <tr> <td class=amazon_cap> <i>As an Amazon Associate I earn from qualifying purchases</i> </td> </tr> </tbody> </table> </div> </div> </p> </div> </div> </aside> <div class="contentarticle col-lg-8 col-md-8 col-sm-12 blog-main text-black"> <div class="jumbotron bg-light border rounded"> <div class=blog-post> <div class=blog-post-title> <h2>DenoJupyterNotebook</h2> </div> <div style="max-width: 100%; margin: auto;"> <main> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9b0eeb6f"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h1 id=Deno-Kernel-for-jupyter-notebook>Deno Kernel for jupyter notebook<a class=anchor-link href=#Deno-Kernel-for-jupyter-notebook>¶</a></h1> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4ba0c529-563f-452f-a858-816380f676fd"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>By combining the power of Deno’s modern JavaScript runtime with Jupyter Notebook’s interactive environment, you can explore and experiment with awk text processing on JavaScript-generated synthetic data.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=71d8d48a-5513-44e3-99d3-1e8c27d3098e"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>A Deno JavaScript kernel is a runtime environment that enables the execution of JavaScript code within a Jupyter Notebook. It brings modern JavaScript features, such as TypeScript, npm, and ES Modules, to the notebook environment. With Deno installed, you can run the Deno Jupyter kernel by executing the following command: <pre>deno jupyter --unstable --install</pre></p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f4625247-a3db-424c-a3a6-4907942a6139"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Javascript-Promises>Javascript Promises<a class=anchor-link href=#Javascript-Promises>¶</a></h2> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=07afb3be-68ba-4d90-b361-0c4f072ab639"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>JavaScript Promises are a powerful tool for managing asynchronous code in JavaScript. They allow you to write code that can handle asynchronous operations without blocking the main thread of execution.</p> <p>In Jupyter Notebook, you can use JavaScript Promises within notebook cells to execute asynchronous code. You can create a Promise object using the Promise constructor and then use the then method to handle the result of the Promise. For example, you could use a Promise to load data from an external API and then display the results in another notebook cell .</p> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5ec31999-dfbf-4d40-82a8-fdbe94ee260a"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=kd>function</span><span class=w> </span><span class=nx>loadData</span><span class=p>()</span><span class=w> </span><span class=p>{</span>
+<span class=w>  </span><span class=k>return</span><span class=w> </span><span class=ow>new</span><span class=w> </span><span class=nb>Promise</span><span class=p>((</span><span class=nx>resolve</span><span class=p>,</span><span class=w> </span><span class=nx>reject</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=p>{</span>
+<span class=w>    </span><span class=c1>// Load data from an external API</span>
+<span class=w>    </span><span class=nx>fetch</span><span class=p>(</span><span class=s1>'https://tessarinseve.pythonanywhere.com/apitest'</span><span class=p>)</span>
+<span class=w>      </span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>response</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>response</span><span class=p>.</span><span class=nx>json</span><span class=p>())</span>
+<span class=w>      </span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>data</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>resolve</span><span class=p>(</span><span class=nx>data</span><span class=p>))</span>
+<span class=w>      </span><span class=p>.</span><span class=k>catch</span><span class=p>(</span><span class=nx>error</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>reject</span><span class=p>(</span><span class=nx>error</span><span class=p>));</span>
+<span class=w>  </span><span class=p>});</span>
+<span class=p>}</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f671be7d-622c-4b23-8ea7-3570e9e41e91"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=c1>// create a Promise object </span>
+<span class=kd>const</span><span class=w> </span><span class=nx>p</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>loadData</span><span class=p>()</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=aeb92f81-5e3d-4ce3-800e-e5a4c322e23d"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=nx>p</span><span class=p>.</span><span class=nx>then</span><span class=p>(</span><span class=nx>data</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>data</span><span class=p>));</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div> <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type=text/plain tabindex=0> <pre>Promise { <span class=ansi-black-intense-fg>undefined</span> }</pre> </div> </div> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=text/plain tabindex=0> <pre>{
+  status: <span class=ansi-green-fg>"ok"</span>,
+  code: <span class=ansi-yellow-fg>200</span>,
+  messages: [],
+  result: { test: { working: <span class=ansi-yellow-fg>true</span> } }
+}
+</pre> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7bee4f43-484f-441d-a752-12b58b97a890"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Synthetic-Data>Synthetic Data<a class=anchor-link href=#Synthetic-Data>¶</a></h2> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1bb32cd3-4d1a-4b52-b004-91361ece0ebd"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=k>import</span><span class=w> </span><span class=p>{</span><span class=w> </span><span class=nx>faker</span><span class=w> </span><span class=p>}</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s1>'npm:@faker-js/faker'</span><span class=p>;</span>
+<span class=k>import</span><span class=w> </span><span class=o>*</span><span class=w> </span><span class=kr>as</span><span class=w> </span><span class=nx>clippy</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s2>"https://deno.land/x/clippy/mod.ts"</span><span class=p>;</span>
+<span class=nx>faker</span><span class=p>.</span><span class=nx>seed</span><span class=p>(</span><span class=mf>123</span><span class=p>);</span>
+<span class=k>export</span><span class=w> </span><span class=kd>function</span><span class=w> </span><span class=nx>createRandomItem</span><span class=p>()</span><span class=w> </span><span class=p>{</span>
+<span class=w>  </span><span class=k>return</span><span class=w> </span><span class=p>{</span>
+<span class=w>    </span><span class=nx>itemId</span><span class=o>:</span><span class=w> </span><span class=kt>faker.string.uuid</span><span class=p>(),</span>
+<span class=w>    </span><span class=nx>item</span><span class=o>:</span><span class=w> </span><span class=kt>faker.commerce.productName</span><span class=p>(),</span>
+<span class=w>    </span><span class=nx>description</span><span class=o>:</span><span class=w>  </span><span class=kt>faker.commerce.productAdjective</span><span class=p>(),</span>
+<span class=w>    </span><span class=nx>price</span><span class=o>:</span><span class=w> </span><span class=kt>faker.commerce.price</span><span class=p>(),</span>
+<span class=w>    </span><span class=nx>purchused</span><span class=o>:</span><span class=w> </span><span class=kt>faker.date.past</span><span class=p>()</span>
+<span class=w>  </span><span class=p>};</span>
+<span class=p>}</span>
+
+<span class=k>export</span><span class=w> </span><span class=kd>const</span><span class=w> </span><span class=nx>ITEMS</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nb>Array</span><span class=p>.</span><span class=kr>from</span><span class=p>({</span><span class=w> </span><span class=nx>length</span><span class=o>:</span><span class=w> </span><span class=kt>10</span><span class=w> </span><span class=p>},</span><span class=w> </span><span class=nx>createRandomItem</span><span class=p>);</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div> <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type=text/plain tabindex=0> <pre><span class=ansi-yellow-fg>123</span></pre> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=506ca6e6-3f21-469a-9943-feb877947c69"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=kd>function</span><span class=w> </span><span class=nx>serializeArrayToCsv</span><span class=p>(</span><span class=nx>array</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
+<span class=w>  </span><span class=k>if</span><span class=w> </span><span class=p>(</span><span class=o>!</span><span class=nb>Array</span><span class=p>.</span><span class=nx>isArray</span><span class=p>(</span><span class=nx>array</span><span class=p>)</span><span class=w> </span><span class=o>||</span><span class=w> </span><span class=nx>array</span><span class=p>.</span><span class=nx>length</span><span class=w> </span><span class=o>===</span><span class=w> </span><span class=mf>0</span><span class=p>)</span><span class=w> </span><span class=p>{</span>
+<span class=w>    </span><span class=k>return</span><span class=w> </span><span class=s1>''</span><span class=p>;</span>
+<span class=w>  </span><span class=p>}</span>
+
+<span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>keys</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nb>Object</span><span class=p>.</span><span class=nx>keys</span><span class=p>(</span><span class=nx>array</span><span class=p>[</span><span class=mf>0</span><span class=p>]);</span>
+<span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>headerRow</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>keys</span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=s1>','</span><span class=p>);</span>
+<span class=w>  </span><span class=kd>const</span><span class=w> </span><span class=nx>bodyRows</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>array</span>
+<span class=w>    </span><span class=p>.</span><span class=nx>map</span><span class=p>((</span><span class=nx>item</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>keys</span><span class=p>.</span><span class=nx>map</span><span class=p>((</span><span class=nx>key</span><span class=p>)</span><span class=w> </span><span class=p>=&gt;</span><span class=w> </span><span class=nx>item</span><span class=p>[</span><span class=nx>key</span><span class=p>]).</span><span class=nx>join</span><span class=p>(</span><span class=s1>','</span><span class=p>))</span>
+<span class=w>    </span><span class=p>.</span><span class=nx>join</span><span class=p>(</span><span class=s1>'\n'</span><span class=p>);</span>
+
+<span class=w>  </span><span class=k>return</span><span class=w> </span><span class=sb>`</span><span class=si>${</span><span class=nx>headerRow</span><span class=si>}</span><span class=sb>\n</span><span class=si>${</span><span class=nx>bodyRows</span><span class=si>}</span><span class=sb>`</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>serializeArrayToCsv</span><span class=p>(</span><span class=nx>ITEMS</span><span class=p>))</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div> </div> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=text/plain tabindex=0> <pre>itemId,item,description,price,purchused
+bb463b8b-b76c-4f6a-a972-665ab5730b69,Generic Wooden Table,Intelligent,84.00,Mon Mar 20 2023 15:38:48 GMT+0000 (Greenwich Mean Time)
+b86a4d7b-b95b-465a-8553-34fac1c60627,Modern Steel Gloves,Refined,427.00,Fri Dec 30 2022 18:43:10 GMT+0000 (Greenwich Mean Time)
+ebf88799-1457-46ad-ae41-77f3869c17dc,Incredible Granite Table,Fantastic,10.00,Sun Jun 11 2023 16:56:19 GMT+0100 (Irish Standard Time)
+56bade48-7a49-4d94-aa8d-215ce3237931,Refined Bronze Tuna,Unbranded,724.00,Sun Oct 02 2022 19:03:26 GMT+0100 (Irish Standard Time)
+07948824-2cb1-458b-9e83-65eddb560346,Bespoke Metal Towels,Tasty,5.00,Tue May 23 2023 19:13:21 GMT+0100 (Irish Standard Time)
+ac090be2-46c3-455d-b80a-8132e57a3d48,Luxurious Granite Shirt,Handcrafted,317.00,Fri Dec 09 2022 08:05:14 GMT+0000 (Greenwich Mean Time)
+5d26d057-8899-4840-9efa-e5384784e4f9,Handmade Granite Hat,Licensed,353.00,Tue May 09 2023 18:21:18 GMT+0100 (Irish Standard Time)
+abd229fd-5fd1-4160-83e7-e83104de3907,Oriental Cotton Fish,Sleek,49.00,Mon May 01 2023 13:54:40 GMT+0100 (Irish Standard Time)
+b4d62ccc-4a4f-4a61-83a7-e8b67270c994,Refined Granite Soap,Licensed,478.00,Tue May 30 2023 16:20:07 GMT+0100 (Irish Standard Time)
+2e0c295c-71ad-43d9-9ee2-1172b616d861,Intelligent Cotton Bacon,Fantastic,468.00,Sat Oct 29 2022 03:11:23 GMT+0100 (Irish Standard Time)
+</pre> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8871e9d-e95b-4ed4-89c5-3230619c88c4"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Text-Processing-with-AWK>Text Processing with AWK<a class=anchor-link href=#Text-Processing-with-AWK>¶</a></h2> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=803a4f84-0ca8-4af7-a14d-97432bd9d748"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=kd>const</span><span class=w> </span><span class=nx>cmd</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>Deno</span><span class=p>.</span><span class=nx>run</span><span class=p>({</span>
+<span class=w>      </span><span class=nx>cmd</span><span class=o>:</span><span class=w> </span><span class=p>[</span><span class=s2>"awk"</span><span class=p>,</span><span class=w> </span><span class=sb>`BEGIN {</span>
+<span class=sb>      FS = ","</span>
+<span class=sb>      print "Product, Price"</span>
+<span class=sb>      }</span>
+<span class=sb>      NR &gt; 1 {</span>
+<span class=sb>                print $2  ", \u20ac" $4</span>
+<span class=sb>            }`</span>
+<span class=w>           </span><span class=p>],</span>
+<span class=w>      </span><span class=nx>stdin</span><span class=o>:</span><span class=w> </span><span class=s2>"piped"</span><span class=p>,</span>
+<span class=w>      </span><span class=nx>stdout</span><span class=o>:</span><span class=w> </span><span class=s2>"piped"</span><span class=p>,</span>
+<span class=w>      </span><span class=nx>stderr</span><span class=o>:</span><span class=w> </span><span class=s2>"piped"</span>
+<span class=p>});</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=application/vnd.jupyter.stderr tabindex=0> <pre></pre> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=08177f9a-fbbc-4a02-b7a8-026f491a6d1b"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=kd>const</span><span class=w> </span><span class=nx>input</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=ow>new</span><span class=w> </span><span class=nx>TextEncoder</span><span class=p>().</span><span class=nx>encode</span><span class=p>(</span><span class=nx>serializeArrayToCsv</span><span class=p>(</span><span class=nx>ITEMS</span><span class=p>));</span>
+<span class=k>await</span><span class=w> </span><span class=nx>Deno</span><span class=p>.</span><span class=nx>writeAll</span><span class=p>(</span><span class=nx>cmd</span><span class=p>.</span><span class=nx>stdin</span><span class=p>,</span><span class=w> </span><span class=nx>input</span><span class=p>);</span>
+<span class=nx>cmd</span><span class=p>.</span><span class=nx>stdin</span><span class=p>.</span><span class=nx>close</span><span class=p>();</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=37aef1e4-a5e5-43c4-92e8-78445fef44b1"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=kd>const</span><span class=w> </span><span class=nx>output</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>cmd</span><span class=p>.</span><span class=nx>output</span><span class=p>()</span><span class=w> </span>
+<span class=kd>const</span><span class=w> </span><span class=nx>outStr</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=ow>new</span><span class=w> </span><span class=nx>TextDecoder</span><span class=p>().</span><span class=nx>decode</span><span class=p>(</span><span class=nx>output</span><span class=p>);</span>
+
+<span class=kd>const</span><span class=w> </span><span class=nx>error</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=k>await</span><span class=w> </span><span class=nx>cmd</span><span class=p>.</span><span class=nx>stderrOutput</span><span class=p>();</span>
+<span class=kd>const</span><span class=w> </span><span class=nx>errorStr</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=ow>new</span><span class=w> </span><span class=nx>TextDecoder</span><span class=p>().</span><span class=nx>decode</span><span class=p>(</span><span class=nx>error</span><span class=p>);</span>
+
+<span class=nx>cmd</span><span class=p>.</span><span class=nx>close</span><span class=p>();</span><span class=w> </span><span class=c1>// Don't forget to close it</span>
+<span class=c1>// write text to clipboard</span>
+<span class=k>await</span><span class=w> </span><span class=nx>clippy</span><span class=p>.</span><span class=nx>write_text</span><span class=p>(</span><span class=nx>outStr</span><span class=p>);</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>outStr</span><span class=p>,</span><span class=w> </span><span class=nx>errorStr</span><span class=p>);</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div> </div> <div class=jp-OutputArea-child> <div class="jp-OutputPrompt jp-OutputArea-prompt"></div> <div class="jp-RenderedText jp-OutputArea-output" data-mime-type=text/plain tabindex=0> <pre>Product, Price
+Generic Wooden Table, €84.00
+Modern Steel Gloves, €427.00
+Incredible Granite Table, €10.00
+Refined Bronze Tuna, €724.00
+Bespoke Metal Towels, €5.00
+Luxurious Granite Shirt, €317.00
+Handmade Granite Hat, €353.00
+Oriental Cotton Fish, €49.00
+Refined Granite Soap, €478.00
+Intelligent Cotton Bacon, €468.00
+ 
+</pre> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1487ea76-9b02-4f5c-b2b0-2c9e902135be"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Python>Python<a class=anchor-link href=#Python>¶</a></h2> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3d66f140-2b38-46b9-9740-89a6176165d0"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=nx>Deno</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>set</span>
+<span class=p>(</span><span class=s2>"DENO_PYTHON_PATH"</span><span class=p>,</span><span class=w> </span><span class=s2>"C:\\Users\\Seve\\appdata\\local\\programs\\python\\python310\\python310.dll"</span>
+<span class=p>);</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>Deno</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s2>"DENO_PYTHON_PATH"</span><span class=p>));</span>
+</pre></div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=68f0481d-1b72-4568-b204-730f4c816d47"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=kd>const</span><span class=w> </span><span class=nx>env</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>Deno</span><span class=p>.</span><span class=nx>env</span><span class=p>.</span><span class=nx>toObject</span><span class=p>();</span>
+<span class=c1>// console.log("env:", env);</span>
+</pre></div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=39f3b086-7722-447d-a670-1fef5a368d19"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=k>import</span><span class=w> </span><span class=p>{</span><span class=w> </span><span class=nx>python</span><span class=w> </span><span class=p>}</span><span class=w> </span><span class=kr>from</span><span class=w> </span><span class=s2>"https://deno.land/x/python/mod.ts"</span><span class=p>;</span>
+
+<span class=kd>const</span><span class=w> </span><span class=nx>sys</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>python</span><span class=p>.</span><span class=k>import</span><span class=p>(</span><span class=s2>"sys"</span><span class=p>);</span>
+<span class=kd>const</span><span class=w> </span><span class=nx>pd</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>python</span><span class=p>.</span><span class=k>import</span><span class=p>(</span><span class=s2>"pandas"</span><span class=p>);</span><span class=w> </span>
+<span class=c1>//positional</span>
+<span class=kd>const</span><span class=w> </span><span class=nx>df</span><span class=w> </span><span class=o>=</span><span class=w> </span><span class=nx>pd</span><span class=p>.</span><span class=nx>read_clipboard</span><span class=p>(</span><span class=s1>','</span><span class=p>)</span>
+<span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>df</span><span class=p>.</span><span class=nx>head</span><span class=p>)</span>
+</pre></div> </div> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6e2dcf56-ab70-4690-8eac-10d4afc95771"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-typescript"><pre><span></span><span class=w> </span>
+</pre></div> </div> </div> </div> </div> </div> </main> <script src=//platform.twitter.com/widgets.js charset=utf-8></script> </div> </div> </div> </div> </div> </div> </main> <div class=footer> <footer class=blog-footer> <p> <script type=text/javascript src=https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js data-name=bmc-button data-slug=seve data-color=#a71616 data-emoji data-font=Lato data-text="Buy Seve a coffee" data-outline-color=#ffffff data-font-color=#ffffff data-coffee-color=#FFDD00></script> </p> <p class=socialfooter> <a href=https://twitter.com/Seve_py title="Follow me"> <i class="fa fa-twitter fa-lg"></i> </a> <a href=https://gitlab.com/users/Sevepy/projects title="My Gitlab repos"> <i class="fa fa-gitlab fa-lg"></i> </a> <a href=http://youtube.com/@sevetech title="My YouTube Channel"> <i class="fa fa-youtube fa-lg"></i> </a> <a href=http://www.pinterest.com/sevetech title=Pinterest> <i class="fa fa-pinterest fa-lg"></i> </a> </p> <p class="text-muted mb-0 pfooter"> 2025 &copy; S.Tessarin</p> <p class="text-muted nb-0 pfooter" xmlns:cc=http://creativecommons.org/ns#>This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-block;>CC BY-NC-SA 4.0<img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> </footer> </div> <button id=scrollTopBtn title="Scroll to Top" type=button class=btn style="display: inline-block;bottom:7%;left:3%" onclick=$(window).scrollTop(0);><i class="fa fa-caret-up"></i></button> <!-- --> <!-- Placed at the end of the document so the pages load faster --> <script src=./theme/js/jquery.js></script> <script src=./theme/js/bootstrap.min.js></script> <script src=./tipuesearch_content.js></script> <script src=./theme/js/tipuesearch_set.js></script> <script src=./theme/js/tipuesearch.js></script> <script src=./theme/js/highlight.pack.js></script> <script>hljs.initHighlightingOnLoad();</script> <script data-name=BMC-Widget data-cfasync=false src=https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js data-id=seve data-description="Support me on Buy me a coffee!" data-message data-color=#FFDD00 data-position=Left data-x_margin=18 data-y_margin=18></script> </body> </html> 

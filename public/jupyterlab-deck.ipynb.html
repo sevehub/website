@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang=en> <head><title>jupyterlab-deck - SeveTech</title><meta charset=utf-8><meta http-equiv=Content-Security-Policy content="img-src https: data:;"><link rel=alternate type=application/rss+xml href=https://tessarinseve.pythonanywhere.com/nws/atom.xml title="Sevetech Journal Blog"><meta name=viewport content="width=device-width, initial-scale=.9,shrink-to-fit=no"><meta name=robots content="index, follow"><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=twitter:title content=jupyterlab-deck><meta name=twitter:description content><meta name=twitter:image content=" https://tessarinseve.pythonanywhere.com/twittercard"><meta name=twitter:card content=summary><meta property=og:type content=website><meta property=og:title content=jupyterlab-deck><meta property=og:image content=https://tessarinseve.pythonanywhere.com/staticweb/blogpost.png><meta property=og:image:type content=image/png><meta property=og:image:width content=475><meta property=og:image:height content=724><script type=application/ld+json>
+      {
+        "@context": "https://schema.org/",
+        "@type": "Article",
+        "name": "jupyterlab-deck",
+        "image": [ "https://tessarinseve.pythonanywhere.com/staticweb/blogpost.png" ],
+        "author": {
+          "@type": "Person",
+          "name": "SeveTech"
+        }
+      }
+</script><link rel=stylesheet href=./theme/css/bootstrap.min.css type=text/css><link href=./theme/css/tipuesearch.css rel=stylesheet><link href=./theme/css/style.css rel=stylesheet><link href=./theme/css/highlight-style.css rel=stylesheet><link rel="shortcut icon" href=./theme/imgs/favicon.ico><link rel=apple-touch-icon href=./theme/imgs/apple-touch-icon.png><link rel=apple-touch-icon sizes=72x72 href=./theme/imgs/apple-touch-icon-72x72.png><link rel=apple-touch-icon sizes=114x114 href=./theme/imgs/apple-touch-icon-114x114.png><link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head> <body> <nav class="navbar sticky-top navbar-dark navbar-expand-sm navbar-custom"> <a class=brand href=./index.html>Seve </a> <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarCollapse aria-controls=navbarCollapse aria-expanded=false aria-label="Toggle navigation"> <span class=navbar-toggler-icon></span> </button> <div class="collapse navbar-collapse" id=navbarCollapse> <ul class="navbar-nav nav"> <li class="nav-item dropdown"> <a href=# class="nav-link dropdown-toggle" data-toggle=dropdown>Categories</a> <div class=dropdown-menu aria-labelledby=dropdown1> <a class=dropdown-item href=./category/ipynb.html> <i class="fa fa-folder fanavbar"></i> IPYNB </a> <a class=dropdown-item href=./category/journal.html> <i class="fa fa-folder fanavbar"></i> Journal </a> <a class=dropdown-item href=./category/pages.html> <i class="fa fa-folder fanavbar"></i> Pages </a> </div> </li> <li class=nav-item> <a class=nav-link href=/nws/search.html> Search <i class="fa fa-search" aria-hidden=true></i></a> </li> <li class=nav-item> <a class=nav-link href=/nws/atom.xml> RSS feed <i class="fa fa-rss" aria-hidden=true></i></a> </li> </ul> </div> </nav> <main role=main class=container> <style>
+
+/* Code cell input styling */
+.jp-Cell-inputArea {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Prompt styling for input cells */
+.jp-InputPrompt {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.jp-OutputPrompt {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* Highlighting styles for syntax classes */
+span.kn { /* Keywords like 'import' and 'from' */
+    color: #007acc;
+    font-weight: bold;
+}
+
+span.nn { /* Namespaces like 'pandas', 'numpy', etc. */
+    color: #5c9e4d;
+}
+
+span.k { /* Operators like 'as' */
+    color: #a71d5d;
+    font-style: italic;
+}
+
+span.n { /* Variables and function names */
+    color: black;
+}
+
+span.s2 { /* String literals */
+    color: #d14;
+}
+
+span.p { /* Punctuation */
+    color: #808080;
+}
+
+span.kc { /* Constants like 'None' */
+    color: #b67f2c;
+    font-weight: bold;
+}
+
+/* Preformatted text styling */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Table styling for output cells */
+table.dataframe {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table.dataframe th, table.dataframe td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table.dataframe th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.jp-RenderedImage {
+    max-width: 100%; /* Ensures the figure doesn't exceed its container */
+    margin: 10px auto; /* Center the figure and add spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jp-RenderedImage img {
+    width: 100%; /* Scale the image to fit its container */
+    height: auto; /* Preserve the aspect ratio */
+    max-height: 500px; /* Optional: Set a maximum height if needed */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+</style> <div class=article> <div class="row mb-6"> <aside class="col-lg-4 col-md-4 col-sm-12 blog-sidebar"> <div class="p-4 mb-3 bg-dark border rounded"> <div> <p>Tue 04 November 2025 </p> <p style="text-align: left;"> <i> Category:</i> <a href=./category/ipynb.html>IPYNB</a> </p> <p style="text-align: left;display: none;"> Tags <a href=./tag/jupyter-notebook.html>jupyter notebook</a> </p> <p> <table class="table table-responsive table-borderless"> <tbody> <tr> <td style="display:flex; justify-content: center;  align-items: center !important;"> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js charset=utf-8></script> </td> <td style="display:flex; justify-content: center;  align-items: center !important;"> <a href=https://www.pinterest.com/pin/create/button/ data-pin-do=buttonBookmark> </a><script type=text/javascript async defer src=//assets.pinterest.com/js/pinit.js></script> </td> </tr> </tbody> </table> </p> <p> <a href=https://tessarinseve.pythonanywhere.com/shared/request-form.html><b>Leave your feedback.</b></a> </p> <p> <a href="https://gitlab.com/Sevepy/wktopelican/-/raw/master/Documents/IPYNB/jupyterlab-deck.ipynb?inline=false"><i class="fa fa-download"> Download</i></a> </p> <p class=small> Become a supporter (click the "cup of coffee" widget on the right-bottom corner) and help me to keep this website online. </p> <p> <div class="row justify-content-center" style=display:block> <div class=col-auto> <a href=https://temu.to/m/e3vctip38c2 class="btn btn-primary" role=button> Click to join Temu Affiliate Program </a> <p class=temu-caption> <i>As a Temu Affiliate I earn from qualifying purchases</i> </p> </div> </div> </p> <p> <div class="row justify-content-center" style=display:none> <div class=col-auto> <table class="table table-responsive"> <tbody> <tr> <td align=center> </td> </tr> <tr> <td class=amazon_cap> <i>As an Amazon Associate I earn from qualifying purchases</i> </td> </tr> </tbody> </table> </div> </div> </p> </div> </div> </aside> <div class="contentarticle col-lg-8 col-md-8 col-sm-12 blog-main text-black"> <div class="jumbotron bg-light border rounded"> <div class=blog-post> <div class=blog-post-title> <h2>jupyterlab-deck</h2> </div> <div style="max-width: 100%; margin: auto;"> <main> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a07832aa-7b2e-442f-8ebe-53c57ad471f6"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h1 id=Jupyterlab-Deck>Jupyterlab-Deck<a class=anchor-link href=#Jupyterlab-Deck>¶</a></h1> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b099c969-e253-425d-8ad6-8252b9ee23af"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>jupyterlab-deck is a JupyterLab extension that transforms notebooks into interactive slide decks for simple presentations. It allows you to present notebook content in a scrollable or slide-based format directly within JupyterLite.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0f0972d0-0409-4d32-b752-c4e2d2f9f014"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>Here's a simple guide to get started:</p> <ul> <li><p>Launch SeveTech-JupyterLite and open a notebook you want to present.</p> </li> <li><p>Open the Command Palette (Ctrl+Shift+C or Cmd+Shift+C) and search for: <em>Start Deck</em></p> </li> </ul> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=61353914-09f8-4c13-a410-94c0be039637"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Slide>Slide<a class=anchor-link href=#Slide>¶</a></h2><p>A slide is the main unit of a presentation.</p> <p>It typically represents a full screen of content, like a title page, a concept explanation, or a visual.</p> <p>When you mark a cell as a "slide", it starts a new slide in the deck.</p> <p>Use it for: major transitions, new topics, or standalone ideas.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ec6ec20e-2227-44b1-b7eb-cd5e3f2d0d0b"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Subslide>Subslide<a class=anchor-link href=#Subslide>¶</a></h2><p>A subslide is nested under a main slide.</p> <p>It appears as a continuation or elaboration of the previous slide.</p> <p>Marking a cell as "subslide" creates a new slide thatâ€™s grouped with the previous one.</p> <p>Use it for: breaking down complex ideas into digestible parts while staying within the same topic.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=75ff7aa2-0cf4-4788-882c-89ef1fa5157b"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>Fragment A fragment reveals content incrementally on the same slide.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=371d0439-2824-4352-a2a5-8fb1ac6645d1"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <p>It doesnâ€™t create a new slide but adds elements one by one (like equations).</p> <p>Marking a cell as "fragment" makes it appear only when you advance the slide.</p> <p>Use it for: step-by-step reveals.</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3dbc953a-6e30-4452-9c2f-62e519a17d20"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Design-Tools>Design Tools<a class=anchor-link href=#Design-Tools>¶</a></h2><p>In Deck mode, click the ellipsis icon in the bottom left corner</p> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8ba8a499-8bcb-4459-b6c3-8a5fd0796b3e"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h1 id=YearFolio>YearFolio<a class=anchor-link href=#YearFolio>¶</a></h1> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1672072a-7efe-4a7a-8501-0a6d1d5946f2"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-ipython3"><pre><span></span><span class=kn>from</span> <span class=nn>IPython.display</span> <span class=kn>import</span> <span class=n>Image</span>
+<span class=n>Image</span><span class=p>(</span><span class=n>url</span><span class=o>=</span><span class=s2>"https://m.media-amazon.com/images/I/71WncfKJWeL._SY342_.jpg"</span><span class=p>)</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div> <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type=text/html tabindex=0> <img alt="No description has been provided for this image" src=https://m.media-amazon.com/images/I/71WncfKJWeL._SY342_.jpg> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=81c6be2e-3a78-4ccc-947f-dcd030428dbd"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=Undated-daily-planner-with-hourly-slots,-QR-linked-day/date-lookup,-and-a-Next%C3%A2%E2%82%AC%E2%80%98Day-Focus-for-streamlined,-flexible-scheduling.>Undated daily planner with hourly slots, QR-linked day/date lookup, and a Nextâ€‘Day Focus for streamlined, flexible scheduling.<a class=anchor-link href=#Undated-daily-planner-with-hourly-slots,-QR-linked-day/date-lookup,-and-a-Next%C3%A2%E2%82%AC%E2%80%98Day-Focus-for-streamlined,-flexible-scheduling.>¶</a></h2> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=63ed45d3-ba01-44b1-b3eb-f4d3f311495f"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <hr> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f99b5c4d-df29-4fcf-8208-a6bfeb23dbb0"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-ipython3"><pre><span></span><span class=kn>from</span> <span class=nn>IPython.display</span> <span class=kn>import</span> <span class=n>Image</span>
+<span class=n>Image</span><span class=p>(</span><span class=n>url</span><span class=o>=</span><span class=s2>"https://m.media-amazon.com/images/I/61zTuZBZgsL._SY522_.jpg"</span><span class=p>)</span>
+</pre></div> </div> </div> </div> </div> <div class=jp-Cell-outputWrapper> <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser"> </div> <div class="jp-OutputArea jp-Cell-outputArea"> <div class="jp-OutputArea-child jp-OutputArea-executeResult"> <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div> <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type=text/html tabindex=0> <img alt="No description has been provided for this image" src=https://m.media-amazon.com/images/I/61zTuZBZgsL._SY522_.jpg> </div> </div> </div> </div> </div> <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5d6e7cc2-f2e0-4fe1-a81a-053c5ec9413f"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt"> </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type=text/markdown> <h2 id=A-minimalist-A5-notebook-built-for-effortless-mobile-scanning:-corner-markers,-a-date-box,-and-unique-page-IDs-for-fast,-organized-digital-archives.>A minimalist A5 notebook built for effortless mobile scanning: corner markers, a date box, and unique page IDs for fast, organized digital archives.<a class=anchor-link href=#A-minimalist-A5-notebook-built-for-effortless-mobile-scanning:-corner-markers,-a-date-box,-and-unique-page-IDs-for-fast,-organized-digital-archives.>¶</a></h2> </div> </div> </div> </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e6cd610a-eec7-4ae0-b168-23948b7b9b82"> <div class=jp-Cell-inputWrapper tabindex=0> <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser"> </div> <div class="jp-InputArea jp-Cell-inputArea"> <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div> <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type=inline> <div class="cm-editor cm-s-jupyter"> <div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div> </div> </div> </div> </div> </div> </main> <script src=//platform.twitter.com/widgets.js charset=utf-8></script> </div> </div> </div> </div> </div> </div> </main> <div class=footer> <footer class=blog-footer> <p> <script type=text/javascript src=https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js data-name=bmc-button data-slug=seve data-color=#a71616 data-emoji data-font=Lato data-text="Buy Seve a coffee" data-outline-color=#ffffff data-font-color=#ffffff data-coffee-color=#FFDD00></script> </p> <p class=socialfooter> <a href=https://twitter.com/Seve_py title="Follow me"> <i class="fa fa-twitter fa-lg"></i> </a> <a href=https://gitlab.com/users/Sevepy/projects title="My Gitlab repos"> <i class="fa fa-gitlab fa-lg"></i> </a> <a href=http://youtube.com/@sevetech title="My YouTube Channel"> <i class="fa fa-youtube fa-lg"></i> </a> <a href=http://www.pinterest.com/sevetech title=Pinterest> <i class="fa fa-pinterest fa-lg"></i> </a> </p> <p class="text-muted mb-0 pfooter"> 2025 &copy; S.Tessarin</p> <p class="text-muted nb-0 pfooter" xmlns:cc=http://creativecommons.org/ns#>This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-block;>CC BY-NC-SA 4.0<img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> </footer> </div> <button id=scrollTopBtn title="Scroll to Top" type=button class=btn style="display: inline-block;bottom:7%;left:3%" onclick=$(window).scrollTop(0);><i class="fa fa-caret-up"></i></button> <!-- --> <!-- Placed at the end of the document so the pages load faster --> <script src=./theme/js/jquery.js></script> <script src=./theme/js/bootstrap.min.js></script> <script src=./tipuesearch_content.js></script> <script src=./theme/js/tipuesearch_set.js></script> <script src=./theme/js/tipuesearch.js></script> <script src=./theme/js/highlight.pack.js></script> <script>hljs.initHighlightingOnLoad();</script> <script data-name=BMC-Widget data-cfasync=false src=https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js data-id=seve data-description="Support me on Buy me a coffee!" data-message data-color=#FFDD00 data-position=Left data-x_margin=18 data-y_margin=18></script> </body> </html> 

@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang=en> <head><title>2023-03-13 - SeveTech</title><meta charset=utf-8><meta http-equiv=Content-Security-Policy content="img-src https: data:;"><link rel=alternate type=application/rss+xml href=https://tessarinseve.pythonanywhere.com/nws/atom.xml title="Sevetech Journal Blog"><meta name=viewport content="width=device-width, initial-scale=.9,shrink-to-fit=no"><meta name=robots content="index, follow"><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=twitter:title content=2023-03-13><meta name=twitter:description content="Gdbmtool VLANG Wrapper, FZF, and VIM Consider this vim9script for Windows OS shown in the tweet below, it displays the …"><meta name=twitter:image content=" https://tessarinseve.pythonanywhere.com/twittercard"><meta name=twitter:card content=summary><meta property=og:type content=website><meta property=og:title content=2023-03-13><meta property=og:image content=https://tessarinseve.pythonanywhere.com/staticweb/blogpost.png><meta property=og:image:type content=image/png><meta property=og:image:width content=475><meta property=og:image:height content=724><script type=application/ld+json>
+      {
+        "@context": "https://schema.org/",
+        "@type": "Article",
+        "name": "2023-03-13",
+        "image": [ "https://tessarinseve.pythonanywhere.com/staticweb/blogpost.png" ],
+        "author": {
+          "@type": "Person",
+          "name": "SeveTech"
+        }
+      }
+</script><link rel=stylesheet href=./theme/css/bootstrap.min.css type=text/css><link href=./theme/css/tipuesearch.css rel=stylesheet><link href=./theme/css/style.css rel=stylesheet><link href=./theme/css/highlight-style.css rel=stylesheet><link rel="shortcut icon" href=./theme/imgs/favicon.ico><link rel=apple-touch-icon href=./theme/imgs/apple-touch-icon.png><link rel=apple-touch-icon sizes=72x72 href=./theme/imgs/apple-touch-icon-72x72.png><link rel=apple-touch-icon sizes=114x114 href=./theme/imgs/apple-touch-icon-114x114.png><link href=https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css rel=stylesheet integrity=sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN crossorigin=anonymous></head> <body> <nav class="navbar sticky-top navbar-dark navbar-expand-sm navbar-custom"> <a class=brand href=./index.html>Seve </a> <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarCollapse aria-controls=navbarCollapse aria-expanded=false aria-label="Toggle navigation"> <span class=navbar-toggler-icon></span> </button> <div class="collapse navbar-collapse" id=navbarCollapse> <ul class="navbar-nav nav"> <li class="nav-item dropdown"> <a href=# class="nav-link dropdown-toggle" data-toggle=dropdown>Categories</a> <div class=dropdown-menu aria-labelledby=dropdown1> <a class=dropdown-item href=./category/ipynb.html> <i class="fa fa-folder fanavbar"></i> IPYNB </a> <a class=dropdown-item href=./category/journal.html> <i class="fa fa-folder fanavbar"></i> Journal </a> <a class=dropdown-item href=./category/pages.html> <i class="fa fa-folder fanavbar"></i> Pages </a> </div> </li> <li class=nav-item> <a class=nav-link href=/nws/search.html> Search <i class="fa fa-search" aria-hidden=true></i></a> </li> <li class=nav-item> <a class=nav-link href=/nws/atom.xml> RSS feed <i class="fa fa-rss" aria-hidden=true></i></a> </li> </ul> </div> </nav> <main role=main class=container> <div class=article> <div class="row mb-6"> <aside class="col-md-4 blog-sidebar"> <div class="p-4 mb-3 bg-dark border rounded"> <div> <p>Mon 13 March 2023 </p> <p style="text-align: left;"> <i> Category:</i> <a href=./category/journal.html>Journal</a> </p> <p style="text-align: left;display: none;"> Tags <a href=./tag/windows.html>Windows</a> <a href=./tag/directory.html>Directory</a> <a href=./tag/working-directory.html>Working directory</a> <a href=./tag/user.html>User</a> </p> <p> <table class="table table-responsive table-borderless"> <tbody> <tr> <td style="display:flex; justify-content: center;  align-items: center !important;"> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class=twitter-share-button data-show-count=false>Tweet</a><script async src=https://platform.twitter.com/widgets.js charset=utf-8></script> </td> <td style="display:flex; justify-content: center;  align-items: center !important;"> <a href=https://www.pinterest.com/pin/create/button/ data-pin-do=buttonBookmark> </a><script type=text/javascript async defer src=//assets.pinterest.com/js/pinit.js></script> </td> </tr> </tbody> </table> </p> <p> <a href=https://tessarinseve.pythonanywhere.com/shared/request-form.html><b>Leave your feedback.</b></a> </p> <p class=small> Become a supporter (click the "cup of coffee" widget on the right-bottom corner) and help me to keep this website online. </p> <p> <div class="row justify-content-center" style=display:block> <div class=col-auto> <a href=https://temu.to/m/e3vctip38c2 class="btn btn-primary" role=button> Click to join Temu Affiliate Program </a> <p class=temu-caption> <i>As a Temu Affiliate I earn from qualifying purchases</i> </p> </div> </div> </p> <p> <div class="row justify-content-center" style=display:none> <div class=col-auto> <table class="table table-responsive"> <tbody> <tr> <td align=center> </td> </tr> <tr> <td class=amazon_cap> <i>As an Amazon Associate I earn from qualifying purchases</i> </td> </tr> </tbody> </table> </div> </div> </p> </div> </div> </aside> <div class="contentarticle col-md-8 blog-main"> <div class=blog-post> <div class=blog-post-title> <h2>2023-03-13</h2> </div> <div class=article-content> <h2 id=gdbmtool_vlang_wrapper_fzf_and_vim>Gdbmtool VLANG Wrapper, FZF, and VIM</h2> <p>Consider this <em>vim9script</em> for Windows OS shown in the tweet below, it displays the files in the working directory, then the user can select and open them with the <em>fzf</em> fuzzy finder.</p> <p><blockquote class=twitter-tweet align=center><a href="https://publish.twitter.com/oembed?url=https://twitter.com/Seve_py/status/1635577279014133762">Tweet of Seve_py/1635577279014133762</a></blockquote></p> <p>This note shows an extended version of the previous VIM script written in VLANG (V programming language). While not strictly necessary, the file list passed to fzf will be saved in a database for demonstrating VLANG ability to wrap command line executables.</p> <h3 id=gdbmtool_vlang_wrapper>Gdbmtool VLANG WRAPPER</h3> <p>The <em>gdbmtool</em> utility allows you to view and modify an existing <strong>GDBM database</strong> or to create a new one. On Windows OS it can be installed from a MSYS2/MINGW-W64 terminal with:</p> <p><code>   pacman -S gdbm </code></p> <p>The following program creates a new database in the %AppData% directory (i.e. C:\Users\user\AppData\Roaming on Windows OS) which stores the working directory filenames.</p> <pre><code>//gdbmtool wrapper
+//Copyright © 2023 Seve Tessarin
+
+//Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+//The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+//THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+import os
+import cli
+
+
+fn main(){
+
+    mut app := cli.Command{
+    name: &#39;gdbmtool_wrapper&#39;
+    description: &#39;gdbmtool wrapper&#39;
+    execute: fn (cmd cli.Command) ! {
+        println(&#39;Usage: gdbmtool_wrapper.exe [command]&#39;)
+        println(&#39;Commands:&#39;)
+        println(&#39;store\t save working directory filenames&#39;)
+        println(&#39;fetch\t fetch working directory filenames&#39;)
+        return
+        }
+        commands: [
+        cli.Command{
+            name: &#39;fetch&#39;
+            execute: fn (cmd cli.Command) ! {
+                fetch()
+                return
+                }
+                },
+        cli.Command{
+            name: &#39;store&#39;
+            execute: fn (cmd cli.Command) ! {
+                store()
+                return
+                }
+                },
+                    ]
+                    }
+                    app.setup()
+                    app.parse(os.args)
+
+                    }
+
+
+fn fetch() {
+
+        appdata := os.config_dir() or {panic(err)}
+        mut flist := os.new_process(&quot;gdbmtool.exe $appdata\\vim.db fetch files&quot;)
+        flist.set_redirect_stdio()
+        flist.wait()
+        mut line := flist.stdout_read()
+        line = line.replace(&quot;[&quot;,&quot;&quot;)
+        line = line.replace(&quot;]&quot;,&quot;&quot;)
+        line = line.replace(&#39;, &#39; ,&#39;\r\n&#39;)
+        println(&#39;$line&#39;)
+}
+
+fn store() {
+
+     files := os.ls(&#39;.&#39;) or {
+                    println(err)
+                    return
+            }
+    appdata := os.config_dir() or {panic(err)}
+    mut cmd := os.new_process(&quot;gdbmtool.exe $appdata\\vim.db store files &#39;$files&#39;&quot;)
+    cmd.run()
+    println(&quot;Directory filenames saved to db&quot;)
+    
+}</code></pre> <p>It can be compiled for a specific OS with:</p> <p><code>   v.exe gdbmtool_wrapper.v</code></p> <p>and it produces the executable gdbmtool_wrapper.exe, which can be moved to a directory included in the <em>PATH</em>.</p> <p>Note that the <em>config_dir</em> function returns the path to the user's configuration directory (depending on the platform).</p> <h2 id=vim_integration>VIM Integration</h2> <p>The previous vim9script can then be changed as follows:</p> <pre><code>    vim9script
+
+    system(&#39;gdbmtool_wrapper.exe store&#39;)
+    var fn = system(&#39;gdbmtool_wrapper.exe fetch |fzf --preview &quot;more &lt; {}&quot;&#39;)
+    execute &#39;vsplit &#39; .. fn
+    execute &#39;norm \&lt;esc&gt;&#39;</code></pre> <script src=//platform.twitter.com/widgets.js charset=utf-8></script> </div> </div> </div> </div> </div> </main> <div class=footer> <footer class=blog-footer> <p> <script type=text/javascript src=https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js data-name=bmc-button data-slug=seve data-color=#a71616 data-emoji data-font=Lato data-text="Buy Seve a coffee" data-outline-color=#ffffff data-font-color=#ffffff data-coffee-color=#FFDD00></script> </p> <p class=socialfooter> <a href=https://twitter.com/Seve_py title="Follow me"> <i class="fa fa-twitter fa-lg"></i> </a> <a href=https://gitlab.com/users/Sevepy/projects title="My Gitlab repos"> <i class="fa fa-gitlab fa-lg"></i> </a> <a href=http://youtube.com/@sevetech title="My YouTube Channel"> <i class="fa fa-youtube fa-lg"></i> </a> <a href=http://www.pinterest.com/sevetech title=Pinterest> <i class="fa fa-pinterest fa-lg"></i> </a> </p> <p class="text-muted mb-0 pfooter"> 2025 &copy; S.Tessarin</p> <p class="text-muted nb-0 pfooter" xmlns:cc=http://creativecommons.org/ns#>This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-block;>CC BY-NC-SA 4.0<img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style=height:22px!important;margin-left:3px;vertical-align:text-bottom; src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p> </footer> </div> <button id=scrollTopBtn title="Scroll to Top" type=button class=btn style="display: inline-block;bottom:7%;left:3%" onclick=$(window).scrollTop(0);><i class="fa fa-caret-up"></i></button> <!-- --> <!-- Placed at the end of the document so the pages load faster --> <script src=./theme/js/jquery.js></script> <script src=./theme/js/bootstrap.min.js></script> <script src=./tipuesearch_content.js></script> <script src=./theme/js/tipuesearch_set.js></script> <script src=./theme/js/tipuesearch.js></script> <script src=./theme/js/highlight.pack.js></script> <script>hljs.initHighlightingOnLoad();</script> <script data-name=BMC-Widget data-cfasync=false src=https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js data-id=seve data-description="Support me on Buy me a coffee!" data-message data-color=#FFDD00 data-position=Left data-x_margin=18 data-y_margin=18></script> </body> </html> 

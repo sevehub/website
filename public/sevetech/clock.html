@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: transparent;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 16px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .clock {
+      background: rgba(10, 12, 16, 0.93);
+      border: 1px solid rgba(0, 200, 120, 0.25);
+      border-radius: 10px;
+      padding: 14px 18px 12px;
+      backdrop-filter: blur(12px);
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.6),
+        0 8px 32px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+      min-width: 210px;
+      user-select: none;
+    }
+
+    /* Big time */
+    .time-row {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .time-hm {
+      font-size: 42px;
+      font-weight: 700;
+      color: #00e896;
+      letter-spacing: -1px;
+      text-shadow: 0 0 18px rgba(0,232,150,0.4);
+    }
+
+    .time-colon {
+      font-size: 42px;
+      font-weight: 300;
+      color: rgba(0,232,150,0.45);
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.15; }
+    }
+
+    .time-sec {
+      font-size: 22px;
+      font-weight: 400;
+      color: rgba(0,232,150,0.6);
+      letter-spacing: 0;
+      align-self: flex-end;
+      padding-bottom: 5px;
+    }
+
+    /* Timezone tag */
+    .tz-tag {
+      font-size: 9px;
+      font-weight: 400;
+      color: rgba(0,232,150,0.4);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      background: rgba(0,200,120,0.12);
+      margin-bottom: 9px;
+    }
+
+    /* Bottom info row */
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .info-label {
+      font-size: 8px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .info-value {
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.04em;
+    }
+
+    .info-value.week {
+      color: #00e896;
+      opacity: 0.75;
+    }
+
+    .info-sep {
+      width: 1px;
+      height: 28px;
+      background: rgba(0,200,120,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="time-row">
+      <span class="time-hm" id="hm">00:00</span>
+      <span class="time-colon" id="colon">:</span>
+      <span class="time-sec" id="sec">00</span>
+    </div>
+    <div class="tz-tag" id="tz-tag">UTC</div>
+    <div class="divider"></div>
+    <div class="info-row">
+      <div class="info-block">
+        <span class="info-label">Date</span>
+        <span class="info-value" id="date-val">—</span>
+      </div>
+      <div class="info-sep"></div>
+      <div class="info-block">
+        <span class="info-label">ISO Wk</span>
+        <span class="info-value week" id="iso-week">W—</span>
+      </div>
+      <div class="info-sep"></div>
+      <div class="info-block">
+        <span class="info-label">Sun Wk</span>
+        <span class="info-value" id="sun-week">W—</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- Week number helpers ---
+
+    // ISO week number (Monday-first, week 1 = week containing first Thursday)
+    function isoWeek(d) {
+      const dt = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+      const day = dt.getUTCDay() || 7; // Mon=1 … Sun=7
+      dt.setUTCDate(dt.getUTCDate() + 4 - day);
+      const yearStart = new Date(Date.UTC(dt.getUTCFullYear(), 0, 1));
+      return Math.ceil((((dt - yearStart) / 86400000) + 1) / 7);
+    }
+
+    // Sunday-first week number (week 1 = week containing Jan 1, Sun starts week)
+    function sundayWeek(d) {
+      const jan1 = new Date(d.getFullYear(), 0, 1);
+      const jan1Day = jan1.getDay(); // 0=Sun
+      const dayOfYear = Math.floor((d - jan1) / 86400000);
+      return Math.floor((dayOfYear + jan1Day) / 7) + 1;
+    }
+
+    const DAYS  = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function tick() {
+      const now = new Date();
+
+      // Time
+      document.getElementById('hm').textContent  = pad(now.getHours()) + ':' + pad(now.getMinutes());
+      document.getElementById('sec').textContent = pad(now.getSeconds());
+
+      // Timezone abbreviation
+      const tzStr = Intl.DateTimeFormat('en', { timeZoneName: 'short' })
+        .formatToParts(now).find(p => p.type === 'timeZoneName')?.value || '';
+      document.getElementById('tz-tag').textContent = tzStr;
+
+      // Date  e.g. "Tue 09 Jun"
+      document.getElementById('date-val').textContent =
+        DAYS[now.getDay()] + ' ' + pad(now.getDate()) + ' ' + MONTHS[now.getMonth()];
+
+      // Week numbers
+      document.getElementById('iso-week').textContent = 'W' + pad(isoWeek(now));
+      document.getElementById('sun-week').textContent = 'W' + pad(sundayWeek(now));
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>

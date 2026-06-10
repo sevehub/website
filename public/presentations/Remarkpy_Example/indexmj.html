@@ -1,0 +1,44 @@
+<!DOCTYPE html><html> <head><meta charset=UTF-8><title>{{title}}</title> {{{style}}} <script src=jquery.js></script><script src=remark.min.js></script><script>
+// Setup MathJax
+MathJax.Hub.Config({
+extensions: ["tex2jax.js"],
+jax: ["input/TeX", "output/HTML-CSS"],
+tex2jax: {
+inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+processEscapes: true,
+skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+}
+});
+MathJax.Hub.Queue(function() {
+$(MathJax.Hub.getAllJax()).map(function(index, elem) {
+return(elem.SourceElement());
+}).parent().addClass('has-jax');
+});
+
+MathJax.Hub.Configured();
+
+
+
+// Load scripts asynchronously
+jQuery.loadAsync = function(url, callback) {
+// Don't use $.getScript since it disables caching
+jQuery.ajax({
+'url': url,
+'dataType': 'script',
+'cache': true,
+'success': callback || jQuery.noop
+});
+};
+    function create() {
+    jQuery.loadAsync("https://tessarinseve.pythonanywhere.com/MathJax/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured")
+//https://stackoverflow.com/questions/19208536/mathjax-not-working-if-loaded-from-local-js-file-or-if-the-source-code-is-includ
+      return remark.create({
+        {{{source}}},
+        ratio: '16:9',
+        highlightLines: true,
+        countIncrementalSlides: false,
+        highlightStyle: 'github'
+      });
+    }
+  </script></head> <body onload="slideshow = create()"> </body> </html> 
