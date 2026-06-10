@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     transform: scale(1.1);
 }
 
+
 #miniPopup {
     position: fixed;
     bottom: 90px;
@@ -36,15 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
     border-radius: 12px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.25);
     display: none;
-    flex-direction: column;
     overflow: hidden;
     z-index: 9999;
+    padding: 0; /* remove extra space */
 }
 
 #miniPopup iframe {
     width: 100%;
     height: 100%;
     border: none;
+    display: block; /* removes bottom whitespace */
 }
 
 #closeMiniPopup {
@@ -56,7 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
     font-size: 18px;
     cursor: pointer;
     color: #444;
+    z-index: 10000;
 }
+
 `;
     document.head.appendChild(style);
 
