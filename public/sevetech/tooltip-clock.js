@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bottom: 90px;
     right: 20px;
     width: 220px;
-    height: 220px;
+    //height: 220px;
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.25);
@@ -78,12 +78,18 @@ document.addEventListener("DOMContentLoaded", () => {
         <iframe id="popupFrame"></iframe>
     `;
     document.body.appendChild(popup);
-
-    // Open popup
-    btn.onclick = () => {
+// Open/close popup when clicking the icon
+btn.onclick = () => {
+    if (popup.style.display === "flex") {
+        popup.style.display = "none";
+        iframe.src = "";
+    } else {
         document.getElementById("popupFrame").src = window.FLOATING_POPUP_URL || "clock.html";
         popup.style.display = "flex";
-    };
+        //iframe.src = window.FLOATING_POPUP_URL || "clock.html";
+        //popup.style.display = "block";
+    }
+};
 
     // Close popup
     document.getElementById("closeMiniPopup").onclick = () => {
