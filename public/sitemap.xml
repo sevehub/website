@@ -1369,4 +1369,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <priority>0.5</priority>
 </url>
 
+
+<loc>https://tessarinseve.pythonanywhere.com/nws/sevetech/index_card_productivity.html</loc>
+<lastmod>2026-06-11</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+
+
 </urlset>
