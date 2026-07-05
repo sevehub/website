@@ -1,46 +1,14 @@
 
-#set document(
+#import "website.typ": article
+
+#show: article.with(
   title: "Why Index Cards Are Still The Most Powerful Productivity Tool",
+  subtitle: "Master Note-Taking, Knowledge Management, UML Documentation, and AI-Powered Code Generation with One Simple Tool",
   author: "SEVETECH",
   date: datetime(year: 2026, month: 4, day: 12),
 )
 
-#set page(
-  paper: "us-letter",
-  margin: (top: 1in, bottom: 1in, left: 1in, right: 1in),
-)
-#set par(justify: true)
 
-#set text(
-  font: "Georgia",
-  size: 11pt,
-  lang: "en",
-)
-
-#set heading(numbering: none)
-
-// Title Page
-#align(center)[
-  #text(
-    size: 28pt,
-    weight: "bold",
-  )[Why Index Cards Are Still The Most Powerful Productivity Tool]
-
-  #v(0.5em)
-
-  #text(
-    size: 14pt,
-    fill: gray,
-  )[Master Note-Taking, Knowledge Management, UML Documentation, and AI-Powered Code Generation with One Simple Tool]
-
-  #v(2em)
-
-  #text(size: 12pt, weight: "bold")[SEVETECH]
-
-  #text(size: 11pt, fill: gray)[APR 12, 2026]
-]
-
-#pagebreak()
 
 = Introduction
 
