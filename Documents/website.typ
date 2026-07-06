@@ -21,19 +21,20 @@
   )
   set heading(numbering: none)
 
-  // Title Page
-  align(center)[
-    #text(size: 28pt, weight: "bold")[#title]
-    #v(0.5em)
-    #text(size: 14pt, fill: gray)[#subtitle]
-    #v(2em)
-    #text(size: 12pt, weight: "bold")[#author]
-    #text(
-      size: 11pt,
-      fill: gray,
-    )[ #date.display("[month repr:short] [day], [year]")]
-  ]
-  pagebreak()
+  text(
+    size: 10pt,
+    fill: gray,
+  )[#link("index2026.html")[← Index] | #link("https://sites.google.com/view/paperstackpro/home/blog")[🏠 Home]]
+  v(1em)
+  text(
+    size: 8pt,
+    fill: gray,
+  )[#title #h(1em) \(#date.display("[month repr:short] [day], [year]")\)]
+  v(1em)
+  text(
+    size: 6pt,
+    fill: gray,
+  )[#subtitle]
 
   body
 }
