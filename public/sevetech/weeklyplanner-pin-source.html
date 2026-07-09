@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,400&display=swap');
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  body{
+    width:1000px; height:1500px;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 41px, #C9C2A8 41px, #C9C2A8 42px),
+      #F2EDE0;
+    font-family:'IBM Plex Sans', sans-serif;
+    position:relative;
+  }
+
+  .margin-line{
+    position:absolute; left:110px; top:0; bottom:0; width:2px; background:#C77B6C; opacity:.55;
+  }
+
+  .pin{ padding:80px 90px 70px 140px; height:100%; display:flex; flex-direction:column; }
+
+  .kicker{
+    font-family:'IBM Plex Mono', monospace; font-size:20px; letter-spacing:.18em;
+    color:#6B6558; text-transform:uppercase; margin-bottom:30px;
+  }
+
+  h1{
+    font-family:'IBM Plex Serif', serif; font-weight:600; color:#2B2A28;
+    font-size:76px; line-height:1.08; letter-spacing:-.01em; margin-bottom:6px;
+  }
+  h1 em{ font-style:italic; color:#5A7A94; }
+
+  .sub{
+    font-family:'IBM Plex Serif', serif; font-style:italic; font-weight:500;
+    font-size:38px; color:#6B6558; margin-top:14px; margin-bottom:56px;
+  }
+
+  .reasons{ display:flex; flex-direction:column; gap:38px; margin-bottom:auto; }
+  .reason{ display:flex; gap:22px; align-items:flex-start; }
+  .num{
+    font-family:'IBM Plex Mono', monospace; font-size:22px; color:#F2EDE0; background:#2B2A28;
+    width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    flex:0 0 auto; margin-top:2px;
+  }
+  .rtext{ font-size:32px; line-height:1.4; color:#2B2A28; max-width:680px; }
+  .rtext b{ font-weight:600; }
+
+  .stack{
+    position:absolute; right:70px; bottom:230px; width:210px; height:150px;
+  }
+  .stack .card{
+    position:absolute; width:200px; height:130px; border:2px solid #2B2A28; border-radius:4px;
+    background:#FDFBF4; box-shadow:0 10px 20px rgba(43,42,40,.12);
+  }
+  .stack .c1{ transform:rotate(-9deg); top:14px; left:6px; background:#F4D35E22; }
+  .stack .c2{ transform:rotate(5deg); top:6px; left:2px; background:#E8A0BF22; }
+  .stack .c3{ transform:rotate(-2deg); top:0; left:8px; }
+  .stack .c3::after{
+    content:""; position:absolute; left:16px; right:16px; top:28px; height:2px; background:#C9C2A8;
+    box-shadow:0 22px 0 #C9C2A8, 0 44px 0 #C9C2A8, 0 66px 0 #C9C2A8;
+  }
+
+  .footer{
+    border-top:2px solid #2B2A28; padding-top:26px; display:flex; align-items:baseline;
+    justify-content:space-between;
+  }
+  .brand{ font-family:'IBM Plex Serif', serif; font-weight:600; font-size:34px; color:#2B2A28; }
+  .tag{ font-family:'IBM Plex Mono', monospace; font-size:19px; color:#6B6558; letter-spacing:.04em; }
+  .stamp{
+    position:absolute; top:960px; right:70px; width:220px; padding:14px 8px;
+    border:3px double #C77B6C; border-radius:6px; transform:rotate(-11deg);
+    text-align:center; color:#C77B6C; font-family:'IBM Plex Mono', monospace;
+    font-weight:600; letter-spacing:.04em; line-height:1.35; font-size:18px;
+    text-transform:uppercase; background:rgba(199,123,108,0.05);
+  }
+  .stamp .small{ display:block; font-size:12px; font-weight:400; letter-spacing:.07em; margin-top:6px; opacity:.85; }
+</style>
+</head>
+<body>
+  <div class="margin-line"></div>
+  <div class="stamp">Don't fall<br>for the<br>PDF hype<span class="small">it's just a file, not paper</span></div>
+  <div class="pin">
+    <div class="kicker">PaperStackPro Undated Weekly Planner</div>
+    <h1>Pen &amp; paper<br>first. <em>Undated,<br>on purpose.</em></h1>
+    <div class="sub">Stay flexible: undated planning, minimal digital overhead </div>
+
+    <div class="reasons">
+      <div class="reason">
+        <div class="num">1</div>
+        <div class="rtext"><b>The app opens on demand.</b> Scan a QR code for a frictionless digital reference calendar — nothing installed, nothing running, nothing pinging you in between.</div>
+      </div>
+      <div class="reason">
+        <div class="num">2</div>
+        <div class="rtext"><b>Undated pages waste nothing.</b> Start on any day, skip a week without "losing" pages, and the system still makes sense.</div>
+      </div>
+      <div class="reason">
+        <div class="num">3</div>
+        <div class="rtext"><b>Nothing to sync or subscribe to.</b> Ink doesn't get deprecated. The planner still works in ten years, no update required.</div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="card c1"></div>
+      <div class="card c2"></div>
+      <div class="card c3"></div>
+    </div>
+
+    <div class="footer">
+      <div class="brand">PaperStackPro</div>
+      <div class="tag">for superproductive people</div>
+    </div>
+  </div>
+</body>
+</html>
