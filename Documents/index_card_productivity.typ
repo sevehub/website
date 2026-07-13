@@ -38,7 +38,7 @@ Their small size and portability, while advantageous as previously described, al
 
 While traditional index cards offer flexibility, an alternative approach involves using a notebook with printed index card pages. This method combines the benefits of index cards with the structure of a notebook, creating a system that addresses some of the limitations of loose cards.
 
-The #underline[Index Card Notebook, available on Amazon (ASIN: B0DPXJNCXY)], features pages with pairs of index cards that include pre-printed progressive numbering and a header on each card. This header system transforms scattered ideas into a thematic framework, making it easier to understand how each card relates to a broader topic.
+The #link("https://a.co/d/0iwgC3t0")[Index Card Notebook, available on Amazon (ASIN: B0DPXJNCXY)], features pages with pairs of index cards that include pre-printed progressive numbering and a header on each card. This header system transforms scattered ideas into a thematic framework, making it easier to understand how each card relates to a broader topic.
 
 Each page spread contains four cards, two per page, creating a facing layout where cards on one page align with cards on the adjacent page. By dedicating the right side of each card to detailed notes and the left side to cues, summaries, or custom references, you create a dynamic learning tool that enhances engagement and understanding.
 
@@ -54,7 +54,7 @@ The eight nodes provide a structured yet flexible way to categorize information,
 
 = The Zettelkasten Method
 
-The #underline[_Zettelkasten_ method], which translates to slip box, is a powerful note-taking and knowledge management system that emphasizes the creation of interconnected notes. Developed by sociologist Niklas Luhmann, this method allows individuals to organize and connect ideas in a way that fosters deeper understanding and creativity. At its core, the Zettelkasten method encourages the creation of individual notes that can stand alone, yet linked to other notes, forming a web of knowledge.
+The _Zettelkasten_ method, which translates to slip box, is a powerful note-taking and knowledge management system that emphasizes the creation of interconnected notes. Developed by sociologist Niklas Luhmann, this method allows individuals to organize and connect ideas in a way that fosters deeper understanding and creativity. At its core, the Zettelkasten method encourages the creation of individual notes that can stand alone, yet linked to other notes, forming a web of knowledge.
 
 The Index Card Notebook is an excellent foundation for building a personal Zettelkasten system. Each card's header functions as a reference point or linking mechanism, allowing you to create connections between related ideas. When a new insight relates to an existing card, you can reference that card's progressive number in your notes, building a network of interconnected thoughts.
 
@@ -68,7 +68,7 @@ These frameworks are designed to simplify complex information by categorizing it
 
 Traditional alphabetical organization of notebooks creates uneven distributions, some letters like S and T generate many entries while Q and X produce very few.
 
-The #underline[Index Card Notebook uses an 8-node configuration optimized for English word distribution]. Each card's header displays its assigned letter range (for example, C-D, E-F-G, H-I-J-K-L), ensuring cards are distributed evenly across sections. This approach eliminates oversized alphabetical categories and nearly-empty ones, creating a balanced filing system.
+The #link("https://tessarinseve.pythonanywhere.com/nws/2025-11-07.wiki.html")[Index Card Notebook uses an 8-node configuration optimized for English word distribution]. Each card's header displays its assigned letter range (for example, C-D, E-F-G, H-I-J-K-L), ensuring cards are distributed evenly across sections. This approach eliminates oversized alphabetical categories and nearly-empty ones, creating a balanced filing system.
 
 = Index Cards as Modern Tools: UML Documentation and LLM Integration
 
@@ -90,9 +90,12 @@ This approach transforms your notebook into a daily planner. As the day progress
 
 = Flashcards
 
-The #underline[_Leitner_ method] is a powerful technique for enhancing learning through the use of spaced repetition. Developed by science journalist Sebastian Leitner, this method is designed to optimize the review process by focusing on the most challenging material while gradually increasing the intervals between reviews of information that has been mastered. The core principle behind the Leitner method is that learners should spend more time on concepts they struggle with and less time on those they have already mastered. This approach not only maximizes efficiency but also reinforces memory retention, making it a highly effective strategy for studying.
+The _Leitner_ method is a powerful technique for enhancing learning through the use of spaced repetition. Developed by science journalist Sebastian Leitner, this method is designed to optimize the review process by focusing on the most challenging material while gradually increasing the intervals between reviews of information that has been mastered. The core principle behind the Leitner method is that learners should spend more time on concepts they struggle with and less time on those they have already mastered. This approach not only maximizes efficiency but also reinforces memory retention, making it a highly effective strategy for studying.
 
-A second index card notebook with a different form factor optimized for flashcard study is also available on Amazon (ASIN: B0DY571T73). It's a one-card-per-page notebook design which creates an effective flashcard system with a question on one side and the answer on the reverse. By using the header to implement a customizable leveling system based on confidence or mastery, learners can prioritize which cards need more frequent review. Annotating review dates on the answer's header allows users to track progress and determine when to revisit concepts, ensuring consistent study habits.
+A second index card notebook with a different form factor optimized for flashcard study is also #link("https://a.co/d/0aWUqqW9")[available on Amazon (ASIN: B0DY571T73)]. It's a one-card-per-page notebook design which creates an effective flashcard system with a question on one side and the answer on the reverse. By using the header to implement a customizable leveling system based on confidence or mastery, learners can prioritize which cards need more frequent review. Annotating review dates on the answer's header allows users to track progress and determine when to revisit concepts, ensuring consistent study habits.
 
 This approach combines active recall, the proven memory technique of self-testing, with the Leitner method's strategic spacing of reviews. The result is a self-monitoring study tool that maintains accountability and fosters sustained learning progress.
 
+This Notebook comes also with a lightweight web page that brings your study sessions online — no setup or installation needed. Upload a CSV from NotebookLM or other sources, browse through cards effortlessly, and try our hybrid study mode that combines the best of both your physical notebook and digital flashcards.
+
+Moreover, a #link("https://github.com/sevehub/Awesome-Flashcard-Decks")[Github repository] provides you with the possibility to either make use of the existing curated flashcard decks or contribute your own by submitting a Pull Request. All decks follow a uniform, two‑column CSV structure (prompt in column one, answer in column two). If you choose to contribute, simply prepare your deck in this format and open a PR to add it to the collection.
