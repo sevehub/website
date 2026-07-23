@@ -24,7 +24,7 @@ if (document.readyState === "loading") {
         setTimeout(buildFeedbackButton, delay);
     });
 } else {
-    setTimeout(build, delay);
+    setTimeout(buildFeedbackButton, delay);
 }
 
   btn.addEventListener('click', () => {
