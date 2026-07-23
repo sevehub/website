@@ -1,44 +1,49 @@
+
 (function () {
 
+  const REPO = 'sevehub/SeveTech-Feedback';
+  const delay = 0;
+
   function buildFeedbackButton() {
-  const btn = document.createElement("button");
+    const btn = document.createElement("button");
 
-  btn.id = "ink-feedback-fab";
-  btn.title = "Leave feedback on GitHub";
-  btn.textContent = "💬 Feedback";
+    btn.id = "ink-feedback-fab";
+    btn.title = "Leave feedback on GitHub";
+    btn.textContent = "💬 Feedback";
 
-  btn.addEventListener("click", () => {
-    window.open("https://github.com/your/repo/issues", "_blank");
-  });
+    document.body.appendChild(btn);
 
-  document.body.appendChild(btn);
+    return btn;
+  }
 
-  return btn;
-}  
-const REPO = 'sevehub/SeveTech-Feedback';
-const btn = document.getElementById('ink-feedback-fab');
-var delay = 0;
+  function attachIssueHandler(btn) {
+    btn.addEventListener('click', () => {
+      const pageTitle = document.title || 'Feedback';
+      const pageUrl = window.location.href;
 
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(buildFeedbackButton, delay);
+      const title = `Feedback: ${pageTitle}`;
+      const body = `**Page:** ${pageUrl}\n\n**Feedback:**\n\n`;
+
+      const issueUrl =
+        `https://github.com/${REPO}/issues/new` +
+        `?title=${encodeURIComponent(title)}` +
+        `&body=${encodeURIComponent(body)}`;
+
+      window.open(issueUrl, '_blank', 'noopener');
     });
-} else {
-    setTimeout(buildFeedbackButton, delay);
-}
+  }
 
-  btn.addEventListener('click', () => {
-    const pageTitle = document.title || 'Feedback';
-    const pageUrl = window.location.href;
- 
-    const title = `Feedback: ${pageTitle}`;
-    const body = `**Page:** ${pageUrl}\n\n**Feedback:**\n\n`;
- 
-    const issueUrl =
-      `https://github.com/${REPO}/issues/new` +
-      `?title=${encodeURIComponent(title)}` +
-      `&body=${encodeURIComponent(body)}`;
- 
-    window.open(issueUrl, '_blank', 'noopener');
-  });
+  function init() {
+    const btn = buildFeedbackButton();
+    attachIssueHandler(btn);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(init, delay);
+    });
+  } else {
+    setTimeout(init, delay);
+  }
+
 })();
