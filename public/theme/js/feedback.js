@@ -15,16 +15,17 @@
 
   return btn;
 }  
-  const REPO = 'sevehub/SeveTech-Feedback';
-  const btn = document.getElementById('ink-feedback-fab');
-  var delay = 0;
-  if (document.readyState === "loading") {
+const REPO = 'sevehub/SeveTech-Feedback';
+const btn = document.getElementById('ink-feedback-fab');
+var delay = 0;
+
+if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(buildFeedbackButton, delay);
+        setTimeout(buildFeedbackButton, delay);
     });
-  } else {
+} else {
     setTimeout(build, delay);
-  }
+}
 
   btn.addEventListener('click', () => {
     const pageTitle = document.title || 'Feedback';

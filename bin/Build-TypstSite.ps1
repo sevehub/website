@@ -81,7 +81,7 @@ $MobileHead = @'
 <link rel="apple-touch-icon" sizes="114x114" href="/nwstheme/imgs/apple-touch-icon-114x114.png"/>
 <link rel="stylesheet" href="/nwstheme/css/website.css">
 <script src="/nwstheme/js/website.js"></script>
-<link rel="stylesheet" href="https://tessarinseve.pythonanywhere.com/nws/theme/css/feedbackcss">
+<link rel="stylesheet" href="https://tessarinseve.pythonanywhere.com/nws/theme/css/feedback.css">
 '@
 
 $ExtendJS = @"
