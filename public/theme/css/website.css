@@ -116,3 +116,87 @@ html[data-theme="light"] pre { background: rgba(0,0,0,0.04); }
 #backToTop:hover {
     background: #555;
 }
+
+/* ==========================================================
+   Substack-style auto-hiding navbar + theme toggle
+   ========================================================== */
+:root {
+    /* Namespaced so these never collide with --ink / --paper / --rule above */
+    --nav-bg: rgba(253, 253, 251, 0.92);
+    --nav-ink: #292929;
+    --nav-border: #292929;
+    --nav-accent: #FF6719; /* matches --accent */
+}
+html[data-theme="dark"] {
+    --nav-bg: rgba(27, 27, 26, 0.92);
+    --nav-ink: #e8e6e1;
+    --nav-border: #e8e6e1;
+}
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme]) {
+        --nav-bg: rgba(27, 27, 26, 0.92);
+        --nav-ink: #e8e6e1;
+        --nav-border: #e8e6e1;
+    }
+}
+body {
+    padding-top: 64px; /* clears the fixed navbar */
+}
+#sevetech-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(6px);
+    border-bottom: 2px dashed var(--nav-border);
+    opacity: 0.5;
+    transform: translateY(0);
+    transition: transform 0.28s ease, background 0.25s ease, border-color 0.25s ease, opacity 0.2s ease;
+}
+#sevetech-nav.nav-hidden { transform: translateY(-100%); }
+#sevetech-nav:hover { opacity: 1; }
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+.nav-left a {
+    color: var(--nav-ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+.nav-left a:hover { border-color: var(--nav-accent); color: var(--nav-accent); }
+.nav-left .divider { color: var(--nav-ink); opacity: 0.4; }
+.nav-brand { font-weight: 700; color: var(--nav-accent) !important; }
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 2px dashed var(--nav-border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--nav-ink);
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 1;
+    transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+#theme-toggle:hover { border-color: var(--nav-accent); color: var(--nav-accent); transform: rotate(15deg); }
+@media (max-width: 480px) {
+    #sevetech-nav { padding: 10px 14px; }
+    .nav-left { gap: 8px; font-size: 12px; letter-spacing: 0.2px; overflow: hidden; white-space: nowrap; }
+    .nav-brand { overflow: hidden; text-overflow: ellipsis; }
+    #theme-toggle { width: 40px; height: 40px; flex-shrink: 0; margin-left: 8px; }
+}
