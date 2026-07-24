@@ -16,6 +16,50 @@
 <script src="https://tessarinseve.pythonanywhere.com/nws/theme/js/feedback.js" defer> </script> 
 <title>SeveTech Blog 2026</title>
 </head>
+(function () {
+  var nav = document.getElementById('sevetech-nav');
+  var toggle = document.getElementById('theme-toggle');
+  var html = document.documentElement;
+  var lastY = window.scrollY;
+  var threshold = 8; // px of scroll before we react, avoids jitter
+ 
+  // ---- auto-hide on scroll direction ----
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    if (Math.abs(y - lastY) < threshold) return;
+ 
+    if (y > lastY && y > 80) {
+      nav.classList.add('nav-hidden');   // scrolling down -> hide
+    } else {
+      nav.classList.remove('nav-hidden'); // scrolling up -> show
+    }
+    lastY = y;
+  }, { passive: true });
+ 
+  // ---- theme toggle, persisted ----
+  // Only sets data-theme when the user has explicitly chosen a theme.
+  // Otherwise the attribute stays absent and prefers-color-scheme
+  // (in website.css) is what drives light/dark.
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+ 
+  function applyTheme(theme, persist) {
+    html.setAttribute('data-theme', theme);
+    toggle.innerHTML = theme === 'dark' ? '&#9789;' : '&#9788;'; // moon / sun
+    if (persist) localStorage.setItem('sevetech-theme', theme);
+  }
+ 
+  var saved = localStorage.getItem('sevetech-theme');
+  if (saved) {
+    applyTheme(saved, false);
+  } else {
+    toggle.innerHTML = prefersDark ? '&#9789;' : '&#9788;';
+  }
+ 
+  toggle.addEventListener('click', function () {
+    var current = html.getAttribute('data-theme') || (prefersDark ? 'dark' : 'light');
+    applyTheme(current === 'dark' ? 'light' : 'dark', true);
+  });
+})();
 
 <body>
 <nav id="sevetech-nav">
