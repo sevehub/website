@@ -86,6 +86,7 @@ $MobileHead = @'
 '@
 
 $ExtendJS = @"
+<script>
 (function () {
   var nav = document.getElementById('sevetech-nav');
   var toggle = document.getElementById('theme-toggle');
@@ -130,7 +131,7 @@ $ExtendJS = @"
     applyTheme(current === 'dark' ? 'light' : 'dark', true);
   });
 })();
-
+</script>
 "@
 
 $NavBar = @"
