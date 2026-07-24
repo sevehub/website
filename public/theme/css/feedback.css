@@ -1,7 +1,7 @@
 
   #ink-feedback-fab {
     position: fixed;
-    bottom: 5rem;             /* stacks above/below the bookmarks FAB — see note */
+    bottom: 3.5rem;             /* stacks above/below the bookmarks FAB — see note */
     right: 1.5rem;
     background: #fff;
     color: #FF6719;

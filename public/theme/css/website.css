@@ -65,6 +65,25 @@ th, td { padding: 0.5em 0.9em; border-bottom: 1px solid var(--rule); text-align:
     code { background: rgba(255,255,255,0.08); }
     pre { background: rgba(255,255,255,0.06); }
 }
+/* Manual override via the navbar toggle (sets <html data-theme="dark|light">).
+   Takes precedence over the OS-driven media query above, since it's
+   only applied once the person explicitly picks a theme. */
+html[data-theme="dark"] {
+    --ink: #e8e6e1;
+    --ink-soft: #a3a29c;
+    --paper: #1b1b1a;
+    --rule: #333230;
+}
+html[data-theme="dark"] code { background: rgba(255,255,255,0.08); }
+html[data-theme="dark"] pre { background: rgba(255,255,255,0.06); }
+html[data-theme="light"] {
+    --ink: #292929;
+    --ink-soft: #6b6b6b;
+    --paper: #fdfdfb;
+    --rule: #e8e6df;
+}
+html[data-theme="light"] code { background: rgba(0,0,0,0.05); }
+html[data-theme="light"] pre { background: rgba(0,0,0,0.04); }
 @media (max-width: 480px) {
     body { padding: 2rem 1.1rem 4rem; font-size: 1.05rem; }
     h1 { font-size: 1.65rem; }

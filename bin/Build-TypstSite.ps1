@@ -82,12 +82,22 @@ $MobileHead = @'
 <link rel="stylesheet" href="/nwstheme/css/website.css">
 <script src="/nwstheme/js/website.js"></script>
 <link rel="stylesheet" href="https://tessarinseve.pythonanywhere.com/nws/theme/css/feedback.css">
+<script src="https://tessarinseve.pythonanywhere.com/nws/theme/js/feedback.js" defer> </script> 
 '@
 
 $ExtendJS = @"
-<script src="https://tessarinseve.pythonanywhere.com/nws/theme/js/feedback.js" defer> </script> 
 "@
 
+$NavBar = @"
+<nav id="sevetech-nav">
+  <div class="nav-left">
+    <a href="index2026.html">&larr; Index</a>
+    <span class="divider">|</span>
+    <a href="https://sites.google.com/view/paperstackpro/home/blog" class="nav-brand">&#127968; PaperStackPro</a>
+  </div>
+  <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">&#9788;</button>
+</nav>
+"@
 function Add-MobileHead {
     param([string]$HtmlPath)
     $content = [System.IO.File]::ReadAllText($HtmlPath, [System.Text.Encoding]::UTF8)
@@ -96,11 +106,11 @@ function Add-MobileHead {
     }
     else {
         # Defensive fallback if Typst emits a bare fragment without <head>.
-        $content = "<!DOCTYPE html>`n<html><head>$MobileHead</head><body>$content</body></html>"
+        $content = "<!DOCTYPE html>`n<html><head>$MobileHead</head><body>$NavBar$content</body></html>"
     }
     if ($content -match '<body>'){
-        $content = $content -replace '<body>', "$ExtendJS<body>`n<button id='backToTop' aria-label='Back to top'>Top</button>`n<article><main>"
-        $content = $content -replace '</body>', "</article></main></body>"
+        $content = $content -replace '<body>', "<body>$NavBar`n<button id='backToTop' aria-label='Back to top'>Top</button>`n<article><main>"
+        $content = $content -replace '</body>', "</article></main>$ExtendJS</body>"
         }
     [System.IO.File]::WriteAllText($HtmlPath, $content, $Utf8NoBom)
 }
@@ -145,6 +155,7 @@ $MobileHead
 </head>
 $ExtendJS
 <body>
+$NavBar
 <h1>Blog 2026</h1>
 <ul>
 $($links -join "`n")

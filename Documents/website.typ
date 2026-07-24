@@ -57,11 +57,6 @@
 
 
   text(
-    size: 10pt,
-    fill: gray,
-  )[#link("index2026.html")[← Index] | #link("https://sites.google.com/view/paperstackpro/home/blog")[🏠 Home]]
-  v(1em)
-  text(
     size: 8pt,
     fill: gray,
   )[#title #h(1em) \(#date.display("[month repr:short] [day], [year]")\)]

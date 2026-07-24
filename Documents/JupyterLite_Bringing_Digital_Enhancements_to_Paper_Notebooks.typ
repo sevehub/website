@@ -9,9 +9,7 @@
 )
 
 
-#v(1em)
 #line(length: 100%, stroke: 0.5pt + rgb("#dddddd"))
-#v(1em)
 
 *JupyterLite* is a serverless, browser-based distribution of JupyterLab that runs Python code entirely in your browser without requiring any backend server or infrastructure. Everything executes locally in your browser using *WebAssembly*. No cloud bills, no compute costs, no vendor lock-in.
 
@@ -52,9 +50,8 @@ A similar URI scheme exists in Obsidian, it allows you to create links that open
 
 == Ephemeral Bookmark Manager
 
-Here we introduce a new digital tool to complement our set of paper notebooks. The *ephemeral bookmark manager* is a simple webpage that relies on LocalStorage for persistence, allowing you to save a set of URLs and download them as markdown files that you can then easily drag and drop into a JupyterLite notebook, accessible via the QR code in our Sketchbook INK.
+Here we introduce a new digital tool to complement our set of paper notebooks. The *ephemeral bookmark manager* is a simple webpage that relies on LocalStorage for persistence, allowing you to save a set of URLs and download them as markdown files that you can then easily drag and drop into a JupyterLite notebook, accessible via the QR code in our #link("https://a.co/d/00Uvapl8")[Sketchbook INK].
 
-#v(1em)
 
 In this way, you can create a computational notebook alongside your design using the same filename as your page ID. For example, if you're working on design concepts in INK5, create a JupyterLite notebook named `INK5.ipynb`. During your design session, save relevant research URLs to the ephemeral bookmark manager, like articles, design inspiration, documentation links, or reference materials. When you're ready, download the bookmarks as markdown (named as `6117_bookmarks.md` based on the day you're working), then drag that markdown file into your INK3 notebook, as shown in the video below.
 
