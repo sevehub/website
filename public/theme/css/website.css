@@ -200,3 +200,30 @@ body {
     .nav-brand { overflow: hidden; text-overflow: ellipsis; }
     #theme-toggle { width: 40px; height: 40px; flex-shrink: 0; margin-left: 8px; }
 }
+
+
+
+/* ==========================================================
+   Footnote bar — copyright / license notice
+   ========================================================== */
+#sevetech-footer {
+    max-width: 40rem;
+    margin: 3rem auto 0;
+    padding: 1.25rem 1.5rem 2rem;
+    border-top: 1px solid var(--rule);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    text-align: center;
+}
+#sevetech-footer a {
+    color: var(--ink-soft);
+    text-decoration: underline;
+    text-decoration-color: var(--rule);
+    text-underline-offset: 2px;
+}
+#sevetech-footer a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+@media (max-width: 480px) {
+    #sevetech-footer { padding: 1rem 1.1rem 1.75rem; font-size: 0.75rem; }
+}

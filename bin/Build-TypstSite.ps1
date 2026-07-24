@@ -72,6 +72,7 @@ $Utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 $MobileHead = @'
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noai, noimageai">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -144,6 +145,13 @@ $NavBar = @"
   <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">&#9788;</button>
 </nav>
 "@
+
+$Footer = @"
+<footer id="sevetech-footer">
+  &copy; 2026 SeveTech. All rights reserved. No part of this site's content may be reproduced, distributed, or used to train machine learning models without prior written permission.
+</footer>
+
+"@
 function Add-MobileHead {
     param([string]$HtmlPath)
     $content = [System.IO.File]::ReadAllText($HtmlPath, [System.Text.Encoding]::UTF8)
@@ -152,11 +160,11 @@ function Add-MobileHead {
     }
     else {
         # Defensive fallback if Typst emits a bare fragment without <head>.
-        $content = "<!DOCTYPE html>`n<html><head>$MobileHead</head><body>$NavBar$content</body></html>"
+        $content = "<!DOCTYPE html>`n<html><head>$MobileHead</head><body>$NavBar$content$Footer</body></html>"
     }
     if ($content -match '<body>'){
         $content = $content -replace '<body>', "<body>$NavBar`n<button id='backToTop' aria-label='Back to top'>Top</button>`n<article><main>"
-        $content = $content -replace '</body>', "</article></main>$ExtendJS</body>"
+        $content = $content -replace '</body>', "</article></main>$Footer$ExtendJS</body>"
         }
     [System.IO.File]::WriteAllText($HtmlPath, $content, $Utf8NoBom)
 }
@@ -206,6 +214,7 @@ $NavBar
 <ul>
 $($links -join "`n")
 </ul>
+$Footer
 </body>
 </html>
 "@
