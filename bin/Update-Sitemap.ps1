@@ -4,8 +4,8 @@ function Update-Sitemap {
     param(
         [string]$BaseSitemap = "./public/sitemap_base.xml",
         [string]$FinalSitemap = "./public/sitemap.xml",
-        [string]$HtmlDir = "./public/sevetech",
-        [string]$BaseUrl = "https://tessarinseve.pythonanywhere.com/nws/sevetech"
+        [string]$HtmlDir = "./public/paperstackpro",
+        [string]$BaseUrl = "https://paperstackpro.surge.sh"
     )
     $root = Get-Location
 
