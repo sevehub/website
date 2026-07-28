@@ -2,9 +2,9 @@
 
 function Update-Sitemap {
     param(
-        [string]$BaseSitemap = "./public/sitemap_base.xml",
-        [string]$FinalSitemap = "./public/sitemap.xml",
-        [string]$HtmlDir = "./public/paperstackpro",
+        [string]$BaseSitemap = "./paperstackpro/sitemap_base.xml",
+        [string]$FinalSitemap = "./paperstackpro/sitemap.xml",
+        [string]$HtmlDir = "./paperstackpro",
         [string]$BaseUrl = "https://paperstackpro.surge.sh"
     )
     $root = Get-Location
@@ -30,7 +30,8 @@ function Update-Sitemap {
     $LF = "`n"
     $output = $base + $LF + "<!-- Auto-generated entries -->" + $LF
 
-    Get-ChildItem $htmlPath -Filter *.html | ForEach-Object {
+    Get-ChildItem $htmlPath -Filter *.html |
+    Where-Object { $_.Name -notmatch '^google' } | ForEach-Object {
         $name    = $_.Name
         $url     = "$BaseUrl/$name"
         $lastmod = $_.LastWriteTime.ToString("yyyy-MM-dd")
