@@ -227,3 +227,24 @@ body {
 @media (max-width: 480px) {
     #sevetech-footer { padding: 1rem 1.1rem 1.75rem; font-size: 0.75rem; }
 }
+
+
+.sevetech-header {
+  font-family: 'Georgia', 'Charter', 'Iowan Old Style', serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #1a1a1a;
+  margin: 0 0 0.6em 0;
+  padding: 0;
+}
+
+.sevetech-header--sub {
+  font-family: 'Georgia', 'Charter', serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: #6b6b6b;
+  margin: 0 0 1.5em 0;
+}
