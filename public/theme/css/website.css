@@ -126,11 +126,15 @@ html[data-theme="light"] pre { background: rgba(0,0,0,0.04); }
     --nav-ink: #292929;
     --nav-border: #292929;
     --nav-accent: #FF6719; /* matches --accent */
+    --h-ink:#292929;
+    
 }
 html[data-theme="dark"] {
     --nav-bg: rgba(27, 27, 26, 0.92);
     --nav-ink: #e8e6e1;
     --nav-border: #e8e6e1;
+    --h-ink:#e8e6e1;
+
 }
 @media (prefers-color-scheme: dark) {
     html:not([data-theme]) {
@@ -235,7 +239,7 @@ body {
   font-size: 2.2rem;
   line-height: 1.25;
   letter-spacing: -0.01em;
-  color: #1a1a1a;
+  color: var(--h-ink);
   margin: 0 0 0.6em 0;
   padding: 0;
 }
@@ -245,6 +249,6 @@ body {
   font-weight: 400;
   font-size: 1.15rem;
   line-height: 1.4;
-  color: #6b6b6b;
+  color: var(--h-ink);
   margin: 0 0 1.5em 0;
 }
