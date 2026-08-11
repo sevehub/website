@@ -15,12 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-
-document.querySelectorAll('nav[role="doc-toc"] li:has(ol) > div')
-  .forEach(div => {
-    div.addEventListener('click', () => {
-      div.parentElement.classList.toggle('open');
-    });
+document.querySelector('#toc .toc-summary')
+  .addEventListener('click', () => {
+    document.getElementById('toc').classList.toggle('collapsed');
   });
 });
 
