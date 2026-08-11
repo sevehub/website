@@ -15,10 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-document.querySelector('#toc .toc-summary')
-  .addEventListener('click', () => {
-    document.getElementById('toc').classList.toggle('collapsed');
-  });
+    document.querySelector('#toc').addEventListener('click', () => { document.getElementById('toc').classList.toggle('collapsed'); });
 });
 
 
