@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+
+document.querySelectorAll('nav[role="doc-toc"] li:has(ol) > div')
+  .forEach(div => {
+    div.addEventListener('click', () => {
+      div.parentElement.classList.toggle('open');
+    });
+  });
 });
 
 
