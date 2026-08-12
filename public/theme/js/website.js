@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-
+document.querySelector("img").classList.add("loaded");
     document.querySelector('#toc').addEventListener('click', () => { document.getElementById('toc').classList.toggle('collapsed'); });
 });
 
