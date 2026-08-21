@@ -43,7 +43,9 @@ code {
     word-break: break-word;
 }
 
+
 .temu-container{
+  display: none;
     @extend .container;
     margin-bottom: -3%;
     margin-top:-5%;
