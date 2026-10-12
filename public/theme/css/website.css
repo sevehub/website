@@ -357,3 +357,7 @@ img:hover {
     width: 100%;
     transform: scale(1.05);
 }
+.centered-iframe {
+  display: block;
+  margin: 0 auto;
+}
