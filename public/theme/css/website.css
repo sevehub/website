@@ -319,6 +319,19 @@ nav[role="doc-toc"] .prefix {
   margin-right: 4px;
 }
 
+
+/* Make it obvious that the summary is clickable */
+#toc .toc-summary {
+  user-select: none; /* Prevent text selection when clicking */
+  -webkit-user-select: none;
+}
+
+/* Optional: visual feedback on active/focus */
+#toc .toc-summary:active {
+  opacity: 0.8;
+}
+
+
 /* --- Mobile styles --- */
 @media (max-width: 480px) {
   #toc {
