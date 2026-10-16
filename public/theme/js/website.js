@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
-  document.querySelector("img").classList.add("loaded");
+  document.querySelectorAll('img').forEach((img) => img.classList.add('loaded'));
   const backToTop = document.getElementById('backToTop');
 
   if (!backToTop) return;

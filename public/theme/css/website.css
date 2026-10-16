@@ -320,17 +320,34 @@ nav[role="doc-toc"] .prefix {
 }
 
 
-/* Make it obvious that the summary is clickable */
-#toc .toc-summary {
-  user-select: none; /* Prevent text selection when clicking */
-  -webkit-user-select: none;
-}
+/*[> Make it obvious that the summary is clickable <]*/
+/*#toc .toc-summary {*/
+  /*user-select: none; [> Prevent text selection when clicking <]*/
+  /*-webkit-user-select: none;*/
+/*}*/
 
-/* Optional: visual feedback on active/focus */
-#toc .toc-summary:active {
-  opacity: 0.8;
+/*[> Optional: visual feedback on active/focus <]*/
+/*#toc .toc-summary:active {*/
+  /*opacity: 0.8;*/
+/*}*/
+/* TOC: the h2 acts as the summary; only the list collapses */
+#toc.collapsed nav[role="doc-toc"] { display: block; }
+#toc.collapsed nav[role="doc-toc"] > ol { display: none; }
+#toc nav[role="doc-toc"] > h2 {
+  display: flex; align-items: center; cursor: pointer;
+  margin: 0; padding: 0.5rem; border-top: 0; font-size: 1.1rem;
 }
+#toc nav[role="doc-toc"] > h2::before {
+  content: "\25B6"; font-size: 0.8rem; margin-right: 6px; transition: transform 0.2s ease;
+}
+#toc:not(.collapsed) nav[role="doc-toc"] > h2::before { transform: rotate(90deg); }
 
+/* Nav: keep the bar one line tall on phones */
+@media (max-width: 480px) {
+  #read-later-btn { font-size: 0; width: 40px; height: 40px; flex-shrink: 0; }
+  #read-later-btn::before { content: "\23F0"; font-size: 16px; }
+  body { padding-top: 72px; }
+}
 
 /* --- Mobile styles --- */
 @media (max-width: 480px) {
